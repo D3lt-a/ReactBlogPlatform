@@ -4,15 +4,18 @@ import App from './App.jsx'
 import './index.css'
 import Layout from './Layout.jsx'
 
+import Home from './pages/Home.jsx'
+import CreateBlog from './pages/CreateBlog.jsx'
+import Login from './pages/Login.jsx'
+
 import { createBrowserRouter, RouterProvider, createRoutesFromElements, Route } from 'react-router-dom'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
-      <Route index element={<Home />} />
-      <Route path="about" element={<About />} />
-      <Route path="contact" element={<Contact />} />
-      <Route path="*" element={<NotFound />} />
+      <Route index element={<Home/>} />
+      <Route path='createblog' element={<CreateBlog/>} />
+      <Route path='login' element={<Login/>} />
     </Route>
   )
 )
